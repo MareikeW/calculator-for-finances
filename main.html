@@ -4,10 +4,28 @@
     <meta charset="utf-8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="calculator.css">
     <title>Home</title>
   </head>
   <body>
     <h1>Viele verschiedene Rechner für Deine Finanzen!</h1>
+
+    <!-- Form zum Werte eintragen -->
+    <form id="einmaligeAnlageForm" autocomplete="off">
+      <label for="anfangskapital">Anfangswert:</label>
+      <input type="text" id="anfangskapital">
+
+      <label for="zinssatz">Zinssatz:</label>
+      <input type="text" id="zinssatz">
+
+      <label for="laufzeit">Laufzeit:</label>
+      <input type="text" id="laufzeit">
+
+      <input type="button" onClick="calc()" value="Berechnen" />
+
+    </form>
+
+    <div id="endkapital"></div>
 
     <!-- Div für Liniendiagramm -->
     <div class="container">
