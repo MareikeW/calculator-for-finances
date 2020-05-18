@@ -40,18 +40,22 @@ let lineChart = new Chart(myChart, {
 
 // Nach Klick auf "Berechnen" wird das Endkapital berechnet und ausgegeben
 function calc() {
-  var start = document.getElementById('anfangskapital').value;
-  var zins = document.getElementById('zinssatz').value;
-  var zeit = document.getElementById('laufzeit').value;
+  var start = parseInt(document.getElementById('anfangskapital').value);
+  var zins = parseInt(document.getElementById('zinssatz').value);
+  var zeit = parseInt(document.getElementById('laufzeit').value);
 
+  var ergebnis = start;
 
+  for (var i = 1; i <= zeit; i++) {
+    ergebnis = ergebnis * (1 + zins/ 100);
+  }
+
+  document.getElementById('endkapital').innerHTML = ergebnis.toFixed(2);
   //berechneEndkapital(start, zins, laufzeit);
 
-  var ergebnis = start + 1;
+//  var ergebnis = parseInt(start); // ohne pareInt start = String
 
-  document.getElementById('endkapital').innerHTML = ergebnis;
-
-  return false;
+  //return document.getElementById('endkapital').innerHTML = ergebnis;
 }
 
 //function  berechneEndkapital({ start, zins, laufzeit }) {
@@ -62,5 +66,3 @@ function calc() {
   //    i++;
   //  }
   //  return ergebnis;
-
-  }

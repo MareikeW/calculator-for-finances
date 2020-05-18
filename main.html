@@ -21,11 +21,13 @@
       <label for="laufzeit">Laufzeit:</label>
       <input type="text" id="laufzeit">
 
-      <input type="button" onClick="calc()" value="Berechnen" />
+      <input type="button" onClick="calc(this.form)" value="Berechnen" />
+
 
     </form>
 
     <div id="endkapital"></div>
+
 
     <!-- Div für Liniendiagramm -->
     <div class="container">
@@ -33,6 +35,6 @@
     </div>
 
 
-    <script type="text/javascript" src="chart.js"></script>
+    <script type="text/javascript" src="chartEinmaligeAnlage.js"></script>
   </body>
 </html>
