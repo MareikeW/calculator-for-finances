@@ -9,7 +9,7 @@
   </head>
   <body>
     <h1>Viele verschiedene Rechner für Deine Finanzen!</h1>
-
+    <div class="rechner-container">
     <!-- Form zum Werte eintragen -->
     <form id="einmaligeAnlageForm" autocomplete="off">
       <label for="anfangskapital">Anfangswert:</label>
@@ -21,14 +21,13 @@
       <label for="laufzeit">Laufzeit:</label>
       <input type="text" id="laufzeit">
 
-      <input type="button" onClick="calc(this.form)" value="Berechnen" />
-
+      <input type="button" onClick="calc(this.form)" value="Berechnen" class="calc-button"/>
 
     </form>
 
     <div id="endkapital"></div>
 
-
+  </div>
     <!-- Div für Liniendiagramm -->
     <div class="container">
       <canvas id="myChart"></canvas>

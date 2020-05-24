@@ -1,23 +1,45 @@
+
+function calc() {
+  var start = parseInt(document.getElementById('anfangskapital').value);
+  var zins = parseInt(document.getElementById('zinssatz').value);
+  var zeit = parseInt(document.getElementById('laufzeit').value);
+
+  var ergebnis = start;
+  var arrWerte = [start];
+  var arrJahre = [0];
+
+  for (var i = 1; i <= zeit; i++) {
+    ergebnis = ergebnis * (1 + zins/ 100);
+    arrWerte.push(ergebnis);
+    arrJahre.push(i);
+
+    //return arrWerte;
+  }
+  //addData();
+
+
+  document.getElementById('endkapital').innerHTML = ergebnis.toFixed(2); // zwei Nachkommastellen
+  //addData(lineChart, arrJahre, arrWerte);
+
+  //function addData() {
+    //  myChart.data.labels.push(5);
+    //  myChart.update();
+//  }
 // Graph
 
-// für canvas braucht man immer einen Kontext
-let myChart = document.getElementById('myChart').getContext('2d');
 
+// für canvas braucht man immer einen Kontext
+var myChart = document.getElementById('myChart').getContext('2d');
 // neues Objekt
-let lineChart = new Chart(myChart, {
+var lineChart = new Chart(myChart, {
   type: 'line',
   data: {
-    labels: [ 'Anfangskapital', '1.Jahr', '2.Jahr', '3.Jahr' ],
+    labels: ["Anfang", "Hallo"],
     datasets: [{
-      label: 'Einnahmen',
-      data: [
-        1000,
-        2800,
-        2000,
-        3000
-      ],
+      label: 'Kapital',
+      data: [1,2,3,4,5],
       borderColor: 'pink',
-      fill: false
+      fill: true
     }]
   },
   options: {
@@ -25,44 +47,15 @@ let lineChart = new Chart(myChart, {
     scales: {
       yAxes: [{
         display: true,
-        ticks:
-        {
-          beginAtZero: true
-        }
+        ticks: {
+                    beginAtZero:true
+                }
       }]
     },
     title: {
       display: true,
-      text: 'Einnahmen in drei Jahren'
+      text: 'Mein Kapitalzuwachs'
     }
   }
 });
-
-// Nach Klick auf "Berechnen" wird das Endkapital berechnet und ausgegeben
-function calc() {
-  var start = parseInt(document.getElementById('anfangskapital').value);
-  var zins = parseInt(document.getElementById('zinssatz').value);
-  var zeit = parseInt(document.getElementById('laufzeit').value);
-
-  var ergebnis = start;
-
-  for (var i = 1; i <= zeit; i++) {
-    ergebnis = ergebnis * (1 + zins/ 100);
-  }
-
-  document.getElementById('endkapital').innerHTML = ergebnis.toFixed(2);
-  //berechneEndkapital(start, zins, laufzeit);
-
-//  var ergebnis = parseInt(start); // ohne pareInt start = String
-
-  //return document.getElementById('endkapital').innerHTML = ergebnis;
 }
-
-//function  berechneEndkapital({ start, zins, laufzeit }) {
-    //var i = 0;
-
-  //  while (i < laufzeit) {
-  //    var ergebnis += start * (1 + (zins/100));
-  //    i++;
-  //  }
-  //  return ergebnis;
