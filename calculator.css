@@ -15,6 +15,45 @@ h1 {
   color: #FCEAFF;
 }
 
+
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: red;
+}
+
+.header-title {
+  margin: auto 1em;
+}
+
+.navbar {
+  width: 30%;
+  background: yellow;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0.5em auto;
+  width: 100%;
+}
+
+.nav-list-item {
+  text-align: center;
+  border: 1px solid;
+  padding: 0.5em 1.5em;
+  width: 120px;
+  border-radius: 10px;
+}
+
+.nav-list-item:hover,
+.nav-list-item:focus {
+    cursor: pointer;
+}
+
+
 form {
   margin-top: 1.5em;
   display: flex;
@@ -44,17 +83,19 @@ input[type=text]:focus {
   padding: 0.7em 1.5em;
   text-transform: uppercase;
   border-radius: 10px;
-  background-color: #fafafa;
-  border-color: #455a64;
+  background-color: #FF7246;
+  color: white;
+  border-color: #FF7246;
   letter-spacing: 1px;
 }
 
 .calc-button:hover,
 .calc-button:focus {
-  background-color: #FF7246;
-  color: white;
+  background-color: white;
+  border-color: #005AFF;
+  color: #005AFF;
   outline: none;
-  border-color: #FF7246;
+
 }
 
 .rechner-container,
