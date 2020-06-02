@@ -1,3 +1,4 @@
+/* Allgemeine Formatierungen */
 * {
   margin: 0;
   padding: 0;
@@ -9,12 +10,19 @@ body {
   background-color: #005AFF;
 }
 
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
 h1 {
   text-align: center;
   padding: 1em 0;
   color: #FCEAFF;
 }
-
 
 .header-container {
   width: 100%;
@@ -53,7 +61,37 @@ h1 {
     cursor: pointer;
 }
 
+/*----Startseite---- */
+.home-table {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+}
 
+.table-field {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 3px solid;
+  width: 20%;
+  border-radius: 20px;
+  text-align: center;
+  background-color: #FF7246;
+  font-size: 1.5em;
+}
+
+.table-field-title {
+  padding: 1em 0 0 0;
+  height: 100px;
+}
+
+.table-field-text {
+  text-transform: none;
+  padding: 0 1.2em;
+  font-size: 0.8em;
+}
+
+/* Rechner */
 form {
   margin-top: 1.5em;
   display: flex;

@@ -2,13 +2,11 @@
 <html lang="de" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="calculator.css">
-    <title>Home</title>
+    <title>Startseite</title>
   </head>
   <body>
-
     <header class="header-container">
       <h2 class="header-title">FinCalc</h2>
       <nav class="navbar">
@@ -18,32 +16,16 @@
         </ul>
       </nav>
     </header>
-    <h1>Viele verschiedene Rechner für Deine Finanzen!</h1>
-    <div class="rechner-container">
-    <!-- Form zum Werte eintragen -->
-    <form id="einmaligeAnlageForm" autocomplete="off">
-      <label for="anfangskapital">Anfangswert:</label>
-      <input type="text" id="anfangskapital">
 
-      <label for="zinssatz">Zinssatz:</label>
-      <input type="text" id="zinssatz">
-
-      <label for="laufzeit">Laufzeit:</label>
-      <input type="text" id="laufzeit">
-
-      <input type="button" onClick="calc(this.form)" value="Berechnen" class="calc-button"/>
-
-    </form>
-
-    <div id="endkapital" class="result">Ergebnis</div>
-
-  </div>
-    <!-- Div für Scatterdiagramm -->
-    <div class="container">
-      <canvas id="chart-einmalig"></canvas>
-    </div>
-
-
-    <script type="text/javascript" src="chartEinmaligeAnlage.js"></script>
+    <h1>Viele verschiedene Finanzrechner warten auf Dich!</h1>
+    <div class="home-table">
+      <div class="table-field"><a href="zinsrechner.html">
+        <h4 class="table-field-title">Zinsrechner</h4>
+        <p class="table-field-text">Der Zinsrechner berechnet das Endkapital für Einmalanlagen.</p></a></div>
+      <div class="table-field"><h4 class="table-field-title">Sparrechner</h4></div>
+      <div class="table-field"><h4 class="table-field-title">Zinseszins-Rechner</h4>
+        <p class="table-field-text">Der Zinseszins-Rechner berechnet das Endkapital bei verschiedenen Zinssätzen.</p></div>
+      <div class="table-field"><h4 class="table-field-title">Sparbuch-Rechner</h4></div>
+      </div>
   </body>
 </html>
