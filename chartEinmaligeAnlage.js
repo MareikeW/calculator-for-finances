@@ -14,7 +14,7 @@ function calc() {
     //console.log(arrJahre);
   }
 
-  document.getElementById('endkapital').innerHTML = ergebnis.toFixed(2); // zwei Nachkommastellen
+  document.getElementById('endkapital').innerHTML = ergebnis.toFixed(2).replace(".",",") + " €"; // zwei Nachkommastellen
 
   var chartData = {
   datasets: [{
@@ -39,10 +39,20 @@ function calc() {
     responsive: true,
     scales: {
       yAxes: [{
-        display: true
+        display: true,
+        ticks: {
+                  // Fügt ein €-Zeichen hinzu
+                  callback: function(value, index, values) {
+                        return value + ' €';
+                  }
+              }
       }],
       xAxes: [{
-          display: true
+          display: true,
+          scaleLabel: {
+                  display: true,
+                  labelString: 'Jahre'
+          }
       }]
     },
     title: {
@@ -52,7 +62,7 @@ function calc() {
   }
 
   // für canvas braucht man immer einen Kontext
-  var myChart = document.getElementById('myChart').getContext('2d');
+  var myChart = document.getElementById('chart-einmalig').getContext('2d');
     // neues Objekt
   var lineChart = new Chart(myChart, {
   type: 'scatter',
