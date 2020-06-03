@@ -69,4 +69,7 @@ function calc() {
   data: chartData,
   options: chartOptions
   });
+
+  var displayChart = document.querySelector('.chart-container');
+  displayChart.style.visibility = 'visible';
 }

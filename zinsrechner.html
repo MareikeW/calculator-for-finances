@@ -13,12 +13,12 @@
       <h2 class="header-title">FinCalc</h2>
       <nav class="navbar">
         <ul class="nav-list">
-          <li class="nav-list-item"><a href="main.html">Home</a></li>
+          <a href="main.html"><li class="nav-list-item">Home</li></a>
           <li class="nav-list-item">Rechner</li>
         </ul>
       </nav>
     </header>
-    <h1>Zinsrechner: Einmalige Anlage</h1>
+    <h1 class="page-title">Zinsrechner: Einmalige Anlage</h1>
     <div class="rechner-container">
     <!-- Form zum Werte eintragen -->
     <form id="einmaligeAnlageForm" autocomplete="off">
@@ -39,11 +39,11 @@
 
   </div>
     <!-- Div für Scatterdiagramm -->
-    <div class="container">
-      <canvas id="chart-einmalig"></canvas>
+    <div class="chart-container">
+      <canvas id="chart-einmalig" class="chart-display"></canvas>
     </div>
 
-
+    <footer>&copy; 2020 Mareike Wendler</footer>
     <script type="text/javascript" src="chartZinsrechner.js"></script>
   </body>
 </html>
