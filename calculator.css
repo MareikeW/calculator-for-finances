@@ -98,7 +98,6 @@ footer {
   margin: 0 auto 25px auto;
 }
 
-
 @media (min-width: 800px) {
   .header-container {
     flex-direction: row;
@@ -190,7 +189,8 @@ input[type=text]:focus {
   background-color: #FCEAFF;
   padding: 1em 1.5em;
   border-radius: 10px;
-  margin-bottom: 50px;
+  margin: 0 auto 50px auto;
+  max-width: 450px;
 }
 
 .result {
