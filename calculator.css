@@ -138,7 +138,7 @@ footer {
   }
 }
 
-/* Rechner */
+/* Rechnerformular */
 form {
   display: flex;
   justify-content: space-between;
@@ -206,10 +206,23 @@ input[type=text]:focus {
   font-weight: bold;
 }
 
+/* Diagramm */
 .chart-container {
   margin: 3em 0;
   background-color: #FCEAFF;
   padding: 1em 1.5em;
   border-radius: 10px;
   visibility: hidden;
+}
+
+/* Tabelle */
+.table-container {
+  margin: 0 auto 20px auto;
+}
+
+th,td {
+  border: 1px solid;
+  padding: 1em 1.5em;
+  background-color: white;
+  text-transform: uppercase;
 }

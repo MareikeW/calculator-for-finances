@@ -1,9 +1,72 @@
 <!DOCTYPE html>
 <html lang="de" dir="ltr">
-    <head>
 
-    </head>
-  <body>
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="calculator.css">
+  <title>Sparrechner</title>
+</head>
 
-  </body>
+<body>
+
+  <header class="header-container">
+    <h2 class="header-title">FinCalc</h2>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <a href="main.html"><li class="nav-list-item">Home</li></a>
+        <li class="nav-list-item">Rechner</li>
+      </ul>
+    </nav>
+  </header>
+  <h1 class="page-title">Sparrechner</h1>
+  <div class="rechner-container">
+    <!-- Form zum Werte eintragen -->
+    <form id="einmaligeAnlageForm" autocomplete="off">
+      <label for="anfangskapital">Anfangskapital:</label>
+      <input type="text" id="anfangskapital">
+
+      <label for="sparrate">Sparrate:</label>
+      <input type="text" id="sparrate">
+
+      <label for="sparintervall">Sparintervall:</label>
+      <!--monatlich-->
+      <input type="text" id="sparintervall">
+
+      <label for="zinssatz">Zinssatz:</label>
+      <input type="text" id="zinssatz">
+
+      <label for="ansparzeit">Ansparzeit:</label>
+      <input type="text" id="ansparzeit">
+
+      <input type="button" onClick="fillTableSparrechner(this.form)" value="Berechnen" class="calc-button" />
+
+    </form>
+
+    <div id="endkapital" class="result">Ergebnis</div>
+
+  </div>
+  <!-- Div für Scatterdiagramm -->
+  <div class="chart-container">
+    <canvas id="chart-einmalig"></canvas>
+  </div>
+
+  <!-- Tabelle für die Ergebnisse -->
+  <table class="table-container">
+    <thead>
+      <tr>
+        <th class="thead-cell">Jahr</th>
+        <th class="thead-cell">Guthaben zu Jahresbeginn</th>
+        <th class="thead-cell">Einzahlungen</th>
+        <th class="thead-cell">Zinsgutschriften</th>
+        <th class="thead-cell">Guthaben am Jahresende</th>
+      </tr>
+    </thead>
+  </table>
+
+  <footer>&copy; 2020 Mareike Wendler</footer>
+  <script type="text/javascript" src="chartSparrechner.js tableSparrechner.js"></script>
+</body>
+
 </html>
