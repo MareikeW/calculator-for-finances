@@ -11,7 +11,6 @@ function calc() {
     ergebnis = ergebnis * (1 + zins/ 100);
     arrWerte.push(ergebnis.toFixed(2));
     arrJahre.push(i);
-    //console.log(arrJahre);
   }
 
   document.getElementById('endkapital').innerHTML = ergebnis.toFixed(2).replace(".",",") + " €"; // zwei Nachkommastellen
@@ -42,7 +41,7 @@ function calc() {
         display: true,
         ticks: {
                   // Fügt ein €-Zeichen hinzu
-                  callback: function(value, index, values) {
+                  callback: function(value) {
                         return value + ' €';
                   }
               }
@@ -64,7 +63,7 @@ function calc() {
   // für canvas braucht man immer einen Kontext
   var myChart = document.getElementById('chart-einmalig').getContext('2d');
     // neues Objekt
-  var lineChart = new Chart(myChart, {
+  new Chart(myChart, {
   type: 'scatter',
   data: chartData,
   options: chartOptions

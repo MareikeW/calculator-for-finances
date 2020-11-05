@@ -13,7 +13,7 @@
       <h2 class="header-title">FinCalc</h2>
       <nav class="navbar">
         <ul class="nav-list">
-          <a href="main.html"><li class="nav-list-item">Home</li></a>
+          <a href="index.html"><li class="nav-list-item">Home</li></a>
           <li class="nav-list-item">Rechner</li>
         </ul>
       </nav>
@@ -23,13 +23,13 @@
     <!-- Form zum Werte eintragen -->
     <form id="einmaligeAnlageForm" autocomplete="off">
       <label for="anfangskapital">Anfangskapital:</label>
-      <input type="text" id="anfangskapital">
+      <input type="number" id="anfangskapital" max="100000">
 
       <label for="zinssatz">Zinssatz:</label>
-      <input type="text" id="zinssatz">
+      <input type="number" id="zinssatz" max="20">
 
       <label for="laufzeit">Laufzeit:</label>
-      <input type="text" id="laufzeit">
+      <input type="number" id="laufzeit" max="30">
 
       <input type="button" onClick="calc(this.form)" value="Berechnen" class="calc-button"/>
 

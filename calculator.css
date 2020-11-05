@@ -7,7 +7,7 @@
 body {
   width: 90%;
   margin: 0 auto;
-  background-color: #005AFF;
+  background-color: rgb(0,90,255);
 }
 
 a:hover {
@@ -55,6 +55,12 @@ a:hover {
 .nav-list-item:hover,
 .nav-list-item:focus {
     cursor: pointer;
+    border-color: white;
+    color: white;
+}
+
+.index-home__btn {
+  justify-content: flex-end;
 }
 
 footer {
@@ -78,6 +84,7 @@ footer {
   font-size: 1.3em;
   color: white;
   margin: 0 auto 30px auto;
+  background-color: rgba(153,189,255,0.2);
 }
 
 .table-field:hover,
@@ -94,7 +101,7 @@ footer {
 .table-field-text {
   text-transform: none;
   padding: 0 1.2em;
-  color: blue;
+  color: white;
   margin: 0 auto 25px auto;
 }
 
@@ -161,9 +168,17 @@ input {
   padding: 15px;
 }
 
-input[type=text]:focus {
+input[type=number]:focus,
+select:focus {
   outline: none; /* löscht border bei Fokus */
   border-color: #FFBB3F;
+}
+
+select {
+  border-radius: 20px;
+  width: 50%;
+  padding: 15px;
+  margin: 0 auto;
 }
 
 .calc-button {
