@@ -72,3 +72,5 @@ function calc() {
   var displayChart = document.querySelector('.chart-container');
   displayChart.style.visibility = 'visible';
 }
+
+calc();
