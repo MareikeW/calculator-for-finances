@@ -16,11 +16,11 @@ function calc() {
   document.getElementById('endkapital').innerHTML = ergebnis.toFixed(2).replace(".",",") + " €"; // zwei Nachkommastellen
 
   var chartData = {
-  datasets: [{
-    label: 'Kapital',
-    data: [],
-    showLine: true
-  }]
+    datasets: [{
+      label: 'Kapital',
+      data: [],
+      showLine: true
+    }]
   }
 
   //addData();
@@ -61,16 +61,14 @@ function calc() {
   }
 
   // für canvas braucht man immer einen Kontext
-  var myChart = document.getElementById('chart-einmalig').getContext('2d');
+  var myChart = document.getElementById('chart-zinsrechner').getContext('2d');
     // neues Objekt
   new Chart(myChart, {
-  type: 'scatter',
-  data: chartData,
-  options: chartOptions
+    type: 'scatter',
+    data: chartData,
+    options: chartOptions
   });
 
   var displayChart = document.querySelector('.chart-container');
   displayChart.style.visibility = 'visible';
 }
-
-calc();

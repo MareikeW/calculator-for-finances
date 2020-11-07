@@ -44,19 +44,19 @@
       <label for="ansparzeit">Ansparzeit:</label>
       <input type="number" id="ansparzeit">
 
-      <input type="button" onClick="fillTableSparrechner(this.form)" value="Berechnen" class="calc-button" />
+      <input type="button" onClick="fillChartSparrechner(this.form)" value="Berechnen" class="calc-button" />
 
     </form>
 
     <div id="endkapital" class="result">Ergebnis</div>
 
   </div>
-  <!-- Div für Scatterdiagramm -->
+  <!-- Div für Linien- und Balkendiagramm -->
   <div class="chart-container">
-    <canvas id="chart-einmalig"></canvas>
+    <canvas id="chart-sparrechner"></canvas>
   </div>
 
-  <!-- Tabelle für die Ergebnisse -->
+  <!-- Tabelle für die Ergebnisse 
   <table class="table-container">
     <thead>
       <tr>
@@ -67,10 +67,10 @@
         <th class="thead-cell">Guthaben am Jahresende</th>
       </tr>
     </thead>
-  </table>
+  </table>-->
 
   <footer>&copy; 2020 Mareike Wendler</footer>
-  <script type="text/javascript" src="tableSparrechner.js"></script>
+  <script type="text/javascript" src="chartSparrechner.js"></script>
 </body>
 
 </html>
