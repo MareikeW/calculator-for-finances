@@ -1,33 +1,50 @@
 function fillChartSparrechner() {
-   let start = document.getElementById("anfangskapital").value;
-   let sparrate = document.getElementById("sparrate").value;
-   let sparintervall = document.getElementById("sparintervall".value);
-   let zinssatz = document.getElementById("zinssatz").value;
-   let ansparzeit = document.getElementById("ansparzeit").value;
-   let endkapital = document.getElementById("endkapital");
+  let anfangskapital = document.getElementById("anfangskapital").valueAsNumber;
+  let sparrate = document.getElementById("sparrate").valueAsNumber;
+  const sparintervall = document.getElementById("sparintervall");
+  let zinssatz = document.getElementById("zinssatz").valueAsNumber;
+  let ansparzeit = document.getElementById("ansparzeit").valueAsNumber;
+  let endkapital = document.getElementById("endkapital"); 
+
+  let jahresendkapital = 0;
+  jahresendkapital += anfangskapital;
+
+  if (sparintervall.value === "monatlich") {
+      berechneMonatlich();
+  } else if (sparintervall.value === "jährlich") {
+      berechneJährlich();
+  }
+
+  function berechneMonatlich() {
+    for (let i = 0; i < ansparzeit; i++) {
+      jahresendkapital += (jahresendkapital * zinssatz) / 100;
+  
+      jahresendkapital += sparrate * (12 + 6.5 * (zinssatz / 100));
+    }
+    endkapital.innerHTML = jahresendkapital.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' });
+  }
+
+  function berechneJährlich() {
+    for (let i = 1; i <= ansparzeit; i++) {
+      jahresendkapital = (((jahresendkapital + sparrate) * zinssatz) / 100) + sparrate + jahresendkapital;
+    }
+    endkapital.innerHTML = jahresendkapital.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' });
+  }
+  
+  
+}
+
+
+/*function fillChartInvestitionsRechner() {
    let jahresEndkapital = 0;
    let arrJahresEndkapital = [jahresEndkapital];
    let arrJahre = [0];
 
     // Alle Werte werden als Strings ausgegeben und müssen in Zahlen umgewandelt werden
-   start = Number(start);
-   sparrate = Number(sparrate);
-   zinssatz = Number(zinssatz);
-   ansparzeit = Number(ansparzeit);
    jahresEndkapital += start;
    einzahlungen = 12 * sparrate;
    zinssatz = 1 + zinssatz / 100;
    console.log(jahresEndkapital)
-
-   // Berechnet das Kapital am Ende jeden Jahres
-   for (var i = 0; i < ansparzeit; i++) {
-        jahresEndkapital = (jahresEndkapital + einzahlungen) * zinssatz;
-        console.log(jahresEndkapital);
-        arrJahresEndkapital.push(jahresEndkapital.toFixed(2));
-        arrJahre.push(i);
-    }
-    // Gibt Ergebnis in Ergebnisfeld aus
-    endkapital.innerHTML = jahresEndkapital.toFixed(2);
    
 
     var chartData = {
@@ -85,3 +102,5 @@ function fillChartSparrechner() {
     var displayChart = document.querySelector('.chart-container');
     displayChart.style.visibility = 'visible';
 }
+
+*/

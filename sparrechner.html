@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
   <link rel="stylesheet" href="calculator.css">
   <title>Sparrechner</title>
 </head>
@@ -14,13 +14,16 @@
   <header class="header-container">
     <h2 class="header-title">FinCalc</h2>
     <nav class="navbar">
-      <ul class="nav-list">
-        <a href="index.html"><li class="nav-list-item">Home</li></a>
-        <li class="nav-list-item">Rechner</li>
+      <ul class="nav-list index-home__btn">
+        <li class="nav-list-item">Home</li>
+        <li class="nav-list-item active">Investition</li>
+        <li class="nav-list-item">Gehalt</li>
+        <li class="nav-list-item">Budget</li>
       </ul>
     </nav>
   </header>
-  <h1 class="page-title">Sparrechner</h1>
+
+  <h1 class="page-title">Investitionsrechner</h1>
   <div class="rechner-container">
     <!-- Form zum Werte eintragen -->
     <form id="einmaligeAnlageForm" autocomplete="off">
@@ -34,7 +37,6 @@
       <!--monatlich-->
       <select id="sparintervall">
         <option value="monatlich">monatlich</option>
-        <option value="viertel">vierteljährlich</option>
         <option value="jährlich">jährlich</option>
       </select>
 
@@ -55,19 +57,6 @@
   <div class="chart-container">
     <canvas id="chart-sparrechner"></canvas>
   </div>
-
-  <!-- Tabelle für die Ergebnisse 
-  <table class="table-container">
-    <thead>
-      <tr>
-        <th class="thead-cell">Jahr</th>
-        <th class="thead-cell">Guthaben zu Jahresbeginn</th>
-        <th class="thead-cell">Einzahlungen</th>
-        <th class="thead-cell">Zinsgutschriften</th>
-        <th class="thead-cell">Guthaben am Jahresende</th>
-      </tr>
-    </thead>
-  </table>-->
 
   <footer>&copy; 2020 Mareike Wendler</footer>
   <script type="text/javascript" src="chartSparrechner.js"></script>
