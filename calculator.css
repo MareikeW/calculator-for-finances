@@ -10,14 +10,23 @@ body {
   background-color: rgb(0,90,255);
 }
 
+a {
+  text-decoration: none;
+  color: inherit
+}
+
 a:hover {
   text-decoration: none;
+}
+
+.header-title,
+.page-title {
+  color: #FCEAFF;
 }
 
 .page-title {
   margin: 0 auto;
   padding: 1em 0;
-  color: #FCEAFF;
   text-align: center;
 }
 
@@ -33,30 +42,37 @@ a:hover {
 }
 
 .navbar {
-  width: 100%;
+  margin: 1rem 0;
 }
 
 .nav-list {
   list-style: none;
   display: flex;
-  justify-content: space-between;
   margin: 0 auto;
-  width: 375px;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .nav-list-item {
+  text-transform: uppercase;
   text-align: center;
-  border: 1px solid;
+  border: .05rem solid;
   padding: 0.5em 1.5em;
-  width: 150px;
   border-radius: 10px;
+  margin: 0.5rem;
+  width: 160px; 
+  background-color: #FCEAFF;
+  border-color: #FCEAFF;
 }
 
+.active,
 .nav-list-item:hover,
 .nav-list-item:focus {
     cursor: pointer;
-    border-color: white;
-    color: white;
+    background-color: #FF7246;
+    border-color: #FF7246;
 }
 
 .index-home__btn {
@@ -106,14 +122,18 @@ footer {
   margin: 0 auto 25px auto;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 850px) {
   .header-container {
     flex-direction: row;
   }
 
   .navbar {
-    width: 350px;
     padding-right: 0;
+  }
+
+  .nav-list {
+    flex-direction: row;
+    width: 70%;
   }
 
   .page-title {
@@ -141,6 +161,10 @@ footer {
 }
 
 @media (min-width: 1400px) {
+  .nav-list {
+    width: 100%;
+  }
+  
   .home-table {
     width: 75%;
   }

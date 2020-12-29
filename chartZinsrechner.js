@@ -13,7 +13,7 @@ function calc() {
     arrJahre.push(i);
   }
 
-  document.getElementById('endkapital').innerHTML = ergebnis.toFixed(2).replace(".",",") + " €"; // zwei Nachkommastellen
+  document.getElementById('endkapital').innerHTML = ergebnis.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })
 
   var chartData = {
     datasets: [{
@@ -42,7 +42,7 @@ function calc() {
         ticks: {
                   // Fügt ein €-Zeichen hinzu
                   callback: function(value) {
-                        return value + ' €';
+                        return value.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })
                   }
               }
       }],
