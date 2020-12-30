@@ -23,248 +23,177 @@
   </header>
 
   <h1 class="page-title">Budgetplaner</h1>
-  <div class="rechner-container">
+  <div class="rechner-container" id="budget-container">
     <!-- Form zum Werte eintragen -->
     <form id="budget-form" autocomplete="off">
-    <div class="row">
+    <div class="row col-title">
         <h3>Einnahmen</h3>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="einkommen">Einkommen (Netto):</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="einkommen">
-        </div>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="sonstige-einnahmen">Sonstige Einnahmen:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="sonstige-einnahmen">
-        </div>
     </div>
-    <hr />
-
-    <div class="row">
+    <div class="row col-title">
         <h3>Ausgaben</h3>
     </div>
-    <div class="row">
+    <fieldset>
+    <div class="row section-title">
         <h4>Wohnen</h4>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="hypothek">Hypothek:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="hypothek">
-        </div>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="miete">Miete:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="miete">
-        </div>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="versorgung">Versorgung:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="versorgung">
-        </div>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="sonstige-wohnausgaben">Sonstige Wohnausgaben:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="sonstige-wohnausgaben">
-        </div>
     </div>
-    <div class="row">
+    </fieldset>
+
+    <fieldset>
+    <div class="row section-title">
         <h4>Transport</h4>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="autokredit">Autokredit:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="autokredit">
-        </div>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="autversicherung">Autoversicherung:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="autversicherung">
-        </div>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="benzin">Benzin:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="benzin">
-        </div>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="parken">Parken:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="parken">
-        </div>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="fahrkarte">Fahrkarte:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="fahrkarte">
-        </div>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="sonstige-transportkosten">Sonstige Transportkosten:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="sonstige-transportkosten">
-        </div>
     </div>
-    <div class="row">
+</fieldset>
+<fieldset>
+    <div class="row section-title">
         <h4>Sonstige Schulden und Kreditzahlungen</h4>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="kredit">Kredit:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="kredit">
-        </div>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="studienkredit">Studienkredit:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="studienkredit">
-        </div>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="sonstige-schulden">Sonstige Schulden:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="sonstige-schulden">
-        </div>
     </div>
-    <div class="row">
+</fieldset>
+<fieldset>
+    <div class="row section-title">
         <h4>Lebenshaltungskosten</h4>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="nahrungsmittel">Nahrungsmittel:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="nahrungsmittel">
-        </div>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="kleidung">Kleidung:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="kleidung">
-        </div>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="haushaltsartikel">Haushaltsartikel:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="haushaltsartikel">
-        </div>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="auswaerts-essen">Auswärts essen:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="auswaerts-essen">
-        </div>
     </div>
     <div class="row">
-        <div class="col-25">
             <label for="sonstige-lebenshaltungskosten">Sonstige Lebenshaltungskosten:</label>
-        </div>
-        <div class="col-75">
             <input type="number" id="sonstige-lebenshaltungskosten">
-        </div>
     </div>
-    <div class="row">
-            <h4>Gesundheit</h4>
-    </div>
-    <div class="row">
-        <div class="col-25">
-            <label for="krankenversicherung">Krankenversicherung:</label>
-        </div>
-        <div class="col-75">
-            <input type="number" id="krankenversicherung">
-        </div>
-    </div>
-            <label for="sonstige-medizinische-ausgaben">Sonstige medizinische Ausgaben:</label>
-            <input type="number" id="sonstige-medizinische-ausgaben">
+</fieldset>
 
-            <h4>Sparen & Investieren</h4>
+<fieldset>
+    <div class="row section-title">
+        <h4>Sparen & Investieren</h4>
+    </div>
+    <div class="row">
             <label for="notgroschen">Notgroschen/Rücklage:</label>
             <input type="number" id="notgroschen">
-
+    </div>
+    <div class="row">
             <label for="sparen">Sparen:</label>
             <input type="number" id="sparen">
-
+    </div>
+    <div class="row">
             <label for="investieren">Investieren:</label>
             <input type="number" id="investieren">
-
-            <h4>Sonstige Ausgaben</h4>
+    </div>
+</fieldset>
+<fieldset>
+    <div class="row section-title">
+        <h4>Sonstige Ausgaben</h4>
+    </div>
+    <div class="row">
             <label for="haustier">Haustier:</label>
             <input type="number" id="haustier">
-
+    </div>
+    <div class="row">
             <label for="spenden">Wohltätigkeit:</label>
             <input type="number" id="spenden">
-
-            <label for="geschenk">Geschenke:</label>
-            <input type="number" id="geschenk">
-
+    </div>
+    <div class="row">
             <label for="hobbys">Hobbys:</label>
             <input type="number" id="hobbys">
-
+    </div>
+    <div class="row">
             <label for="unterhaltung">Unterhaltung:</label>
             <input type="number" id="unterhaltung">
-
+    </div>
+    <div class="row">
             <label for="reisen">Reisen:</label>
             <input type="number" id="reisen">
-
+    </div>
+    <div class="row">
             <label for="sonstige-ausgaben">Sonstige Ausgaben:</label>
             <input type="number" id="sonstige-ausgaben">
-
-            <input type="button" id="submit-button" onClick="fillChartSparrechner(this.form)" value="Berechnen" class="calc-button" />
-            </form>
-
-            <div id="endkapital" class="result">Ergebnis</div>
-
+    </div>
+</fieldset>
+    <div class="row form-button">
+            <input type="button" id="submit-button" onClick="fillChartBudget(this.form)" value="Berechnen" class="calc-button" />
+    </div>    
+    </form>
   </div>
-  <!-- Div für Linien- und Balkendiagramm -->
+
+  <div id="endkapital" class="result">Ergebnis</div>
+  <!-- Div für Tortendiagramm -->
   <div class="chart-container">
-    <canvas id="chart-sparrechner"></canvas>
+    <canvas id="chart-budget"></canvas>
   </div>
 
   <footer>&copy; 2020 Mareike Wendler</footer>
-  <script type="text/javascript" src="chartSparrechner.js"></script>
+  <script type="text/javascript" src="chartBudget.js"></script>
 </body>
 
 </html>
