@@ -22,24 +22,24 @@
     <h1 class="page-title">Einmalige Anlage</h1>
     <div class="rechner-container">
     <!-- Form zum Werte eintragen -->
-    <form id="einmaligeAnlageForm" autocomplete="off">
+    <form id="einmaligeAnlageForm" autocomplete="off" action="#">
       <label for="anfangskapital">Anfangskapital:</label>
-      <input type="number" id="anfangskapital" max="100000">
+      <input type="number" id="anfangskapital" max="100000" required />
 
       <label for="zinssatz">Zinssatz:</label>
-      <input type="number" id="zinssatz" max="20">
+      <input type="number" id="zinssatz" max="20" required />
 
       <label for="laufzeit">Laufzeit:</label>
-      <input type="number" id="laufzeit" max="30">
+      <input type="number" id="laufzeit" max="30" required />
 
-      <input type="button" onClick="calc(this.form)" value="Berechnen" class="calc-button"/>
+      <button id="submit-zins-button" class="calc-button">Berechnen</button>
 
     </form>
 
     <div id="endkapital" class="result">Ergebnis</div>
 
   </div>
-    <!-- Div für Scatterdiagramm -->
+    <!-- Div für Scatterdiagramm onSubmit="calc(this.form)"-->
     <div class="chart-container">
       <canvas id="chart-zinsrechner"></canvas>
     </div>

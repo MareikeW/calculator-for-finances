@@ -249,9 +249,28 @@ select {
   visibility: hidden;
 }
 
-/* Tabelle */
+@media (min-width: 900px) {
+  .chart-container {
+    margin: 0 auto;
+    max-width: 800px;
+    margin-bottom: 2em;
+  } 
+}
+
+/* Budget */
 #budget-container {
   padding: 0;
+}
+
+@media (min-width: 800px) {
+  #budget-container {
+    max-width: 600px;
+  }
+}
+
+#amount-left-banner {
+  position: fixed;
+  display: none;
 }
 
 fieldset {
@@ -288,6 +307,10 @@ fieldset {
 
 .form-button {
   text-align: center;
+}
+
+#chart-budget {
+  font-size: 10em;
 }
 
 

@@ -1,11 +1,15 @@
-function calc() {
-  var start = parseInt(document.getElementById('anfangskapital').value);
-  var zins = parseInt(document.getElementById('zinssatz').value);
-  var zeit = parseInt(document.getElementById('laufzeit').value);
 
-  var ergebnis = start;
-  var arrWerte = [start];
-  var arrJahre = [0];
+const button = document.getElementById("submit-zins-button");
+
+button.addEventListener("click", calc);
+function calc() {
+  const start = parseInt(document.getElementById('anfangskapital').value);
+  const zins = parseInt(document.getElementById('zinssatz').value);
+  const zeit = parseInt(document.getElementById('laufzeit').value);
+
+  let ergebnis = start;
+  let arrWerte = [start];
+  let arrJahre = [0];
 
   for (var i = 1; i <= zeit; i++) {
     ergebnis = ergebnis * (1 + zins/ 100);
