@@ -2,24 +2,38 @@
 let button = document.getElementById("budget-button");
 let einkommen = document.getElementById("einkommen");
 let sonstEinnahmen = document.getElementById("sonstige-einnahmen");
-let restbetragAnzeige = document.getElementById("amount-left-banner");
 
-
-einkommen.addEventListener("input", setRestbetrag);
-
-function setRestbetrag(event) {
+button.addEventListener("click", getEinnahmen);
+function getEinnahmen(event) {
     event.preventDefault();
-    restbetragAnzeige.textContent = "Restbetrag " + event.target.value;
-    restbetragAnzeige.style.display = "block";
-    return restbetragAnzeige;
+    var einnahmenFelder = document.getElementsByClassName("einnahmen");
+    var einnahmenArray = [];
+
+    for (var i = 0; i < einnahmenFelder.length; i++) {
+        einnahmenArray.push(parseInt(einnahmenFelder[i].value));
+    }
+    add = (a, b) =>  a + b;
+    let sum = einnahmenArray.reduce(add);
+
+    getDifferenz(sum);
+}
+function getDifferenz(sum) {
+    var ausgabenFelder = document.getElementsByClassName("ausgaben");
+    var ausgabenArray = [];
+
+    for (var i = 0; i < ausgabenFelder.length; i++) {
+        ausgabenArray.push(parseInt(ausgabenFelder[i].value));
+    }
+    add2 = (a, b) =>  a + b;
+    let sum2 = ausgabenArray.reduce(add2);
+   
+    let ergebnis = sum - sum2;
+
+    displayErgebnis(ergebnis);
 }
 
-button.addEventListener("click", send);
+function displayErgebnis(ergebnis) {
 
-function send(event) {
-    event.preventDefault();
-    let restbetrag = parseInt(document.getElementById("einkommen").value);
-    console.log(restbetrag)
-    document.getElementById("chart-budget").innerHTML = restbetrag;
+    ergebnis < 0 ? ergebnis.style.color = "red" : ergebnis.style.color = "black";
+    document.getElementById("chart-budget").innerHTML = ergebnis;
 }
-

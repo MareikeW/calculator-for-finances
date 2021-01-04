@@ -36,11 +36,11 @@
     </div>
     <div class="row">
             <label for="einkommen">Einkommen (Netto):</label>
-            <input type="number" id="einkommen">
+            <input type="number" id="einkommen" value="0" class="einnahmen"> €
     </div>
     <div class="row">
             <label for="sonstige-einnahmen">Sonstige Einnahmen:</label>
-            <input type="number" id="sonstige-einnahmen">
+            <input type="number" id="sonstige-einnahmen" value="0" class="einnahmen"> €
     </div>
     <div class="row col-title">
         <h3>Ausgaben</h3>
@@ -51,49 +51,54 @@
     </div>
     <div class="row">
             <label for="hypothek">Hypothek:</label>
-            <input type="number" id="hypothek">
+            <input type="number" id="hypothek" value="0" class="ausgaben"> €
     </div>
     <div class="row">
             <label for="miete">Miete:</label>
-            <input type="number" id="miete">
+            <input type="number" id="miete" value="0" class="ausgaben"> €
     </div>
-    <div class="row">
+</fieldset>
+    
+
+<!--
+<div class="row">
             <label for="versorgung">Versorgung:</label>
-            <input type="number" id="versorgung">
+            <input type="number" id="versorgung"> €
     </div>
     <div class="row">
             <label for="sonstige-wohnausgaben">Sonstige Wohnausgaben:</label>
-            <input type="number" id="sonstige-wohnausgaben">
+            <input type="number" id="sonstige-wohnausgaben"> €
     </div>
-    </fieldset>
+    
 
+    
     <fieldset>
     <div class="row section-title">
         <h4>Transport</h4>
     </div>
     <div class="row">
             <label for="autokredit">Autokredit:</label>
-            <input type="number" id="autokredit">
+            <input type="number" id="autokredit"> €
     </div>
     <div class="row">
             <label for="autversicherung">Autoversicherung:</label>
-            <input type="number" id="autversicherung">
+            <input type="number" id="autversicherung"> €
     </div>
     <div class="row">
             <label for="benzin">Benzin:</label>
-            <input type="number" id="benzin">
+            <input type="number" id="benzin"> €
     </div>
     <div class="row">
             <label for="parken">Parken:</label>
-            <input type="number" id="parken">
+            <input type="number" id="parken"> €
     </div>
     <div class="row">
             <label for="fahrkarte">Fahrkarte:</label>
-            <input type="number" id="fahrkarte">
+            <input type="number" id="fahrkarte"> €
     </div>
     <div class="row">
             <label for="sonstige-transportkosten">Sonstige Transportkosten:</label>
-            <input type="number" id="sonstige-transportkosten">
+            <input type="number" id="sonstige-transportkosten"> €
     </div>
 </fieldset>
 <fieldset>
@@ -102,15 +107,15 @@
     </div>
     <div class="row">
             <label for="kredit">Kredit:</label>
-            <input type="number" id="kredit">
+            <input type="number" id="kredit"> €
     </div>
     <div class="row">
             <label for="studienkredit">Studienkredit:</label>
-            <input type="number" id="studienkredit">
+            <input type="number" id="studienkredit"> €
     </div>
     <div class="row">
             <label for="sonstige-schulden">Sonstige Schulden:</label>
-            <input type="number" id="sonstige-schulden">
+            <input type="number" id="sonstige-schulden"> €
     </div>
 </fieldset>
 <fieldset>
@@ -119,23 +124,23 @@
     </div>
     <div class="row">
             <label for="nahrungsmittel">Nahrungsmittel:</label>
-            <input type="number" id="nahrungsmittel">
+            <input type="number" id="nahrungsmittel"> €
     </div>
     <div class="row">
             <label for="kleidung">Kleidung:</label>
-            <input type="number" id="kleidung">
+            <input type="number" id="kleidung"> €
     </div>
     <div class="row">
             <label for="haushaltsartikel">Haushaltsartikel:</label>
-            <input type="number" id="haushaltsartikel">
+            <input type="number" id="haushaltsartikel"> €
     </div>
     <div class="row">
             <label for="auswaerts-essen">Auswärts essen:</label>
-            <input type="number" id="auswaerts-essen">
+            <input type="number" id="auswaerts-essen"> €
     </div>
     <div class="row">
             <label for="sonstige-lebenshaltungskosten">Sonstige Lebenshaltungskosten:</label>
-            <input type="number" id="sonstige-lebenshaltungskosten">
+            <input type="number" id="sonstige-lebenshaltungskosten"> €
     </div>
 </fieldset>
 
@@ -145,15 +150,15 @@
     </div>
     <div class="row">
             <label for="notgroschen">Notgroschen/Rücklage:</label>
-            <input type="number" id="notgroschen">
+            <input type="number" id="notgroschen"> €
     </div>
     <div class="row">
             <label for="sparen">Sparen:</label>
-            <input type="number" id="sparen">
+            <input type="number" id="sparen"> €
     </div>
     <div class="row">
             <label for="investieren">Investieren:</label>
-            <input type="number" id="investieren">
+            <input type="number" id="investieren"> €
     </div>
 </fieldset>
 <fieldset>
@@ -162,29 +167,30 @@
     </div>
     <div class="row">
             <label for="haustier">Haustier:</label>
-            <input type="number" id="haustier">
+            <input type="number" id="haustier"> €
     </div>
     <div class="row">
             <label for="spenden">Wohltätigkeit:</label>
-            <input type="number" id="spenden">
+            <input type="number" id="spenden"> €
     </div>
     <div class="row">
             <label for="hobbys">Hobbys:</label>
-            <input type="number" id="hobbys">
+            <input type="number" id="hobbys"> €
     </div>
     <div class="row">
             <label for="unterhaltung">Unterhaltung:</label>
-            <input type="number" id="unterhaltung">
+            <input type="number" id="unterhaltung"> €
     </div>
     <div class="row">
             <label for="reisen">Reisen:</label>
-            <input type="number" id="reisen">
+            <input type="number" id="reisen"> €
     </div>
     <div class="row">
             <label for="sonstige-ausgaben">Sonstige Ausgaben:</label>
-            <input type="number" id="sonstige-ausgaben">
+            <input type="number" id="sonstige-ausgaben"> €
     </div>
 </fieldset>
+-->
     <div class="row form-button">
             <button id="budget-button" class="calc-button">Fertig</button>
     </div>    
