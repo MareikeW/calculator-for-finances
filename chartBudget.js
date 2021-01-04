@@ -1,39 +1,63 @@
 
-let button = document.getElementById("budget-button");
-let einkommen = document.getElementById("einkommen");
-let sonstEinnahmen = document.getElementById("sonstige-einnahmen");
+const button = document.getElementById("budget-button");
+const einkommen = document.getElementById("einkommen");
+const sonstEinnahmen = document.getElementById("sonstige-einnahmen");
+const ergebnisContainer =  document.getElementById("chart-budget");
+const printSeite = document.getElementById("printSeite");
+let sumEinnahmen = 0;
+let sumAusgaben = 0;
+let ergebnis = 0;
 
 button.addEventListener("click", getEinnahmen);
+
 function getEinnahmen(event) {
     event.preventDefault();
-    var einnahmenFelder = document.getElementsByClassName("einnahmen");
-    var einnahmenArray = [];
+    let einnahmenFelder = document.getElementsByClassName("einnahmen");
+    let einnahmenArray = [];
 
-    for (var i = 0; i < einnahmenFelder.length; i++) {
+    for (let i = 0; i < einnahmenFelder.length; i++) {
         einnahmenArray.push(parseInt(einnahmenFelder[i].value));
     }
-    add = (a, b) =>  a + b;
-    let sum = einnahmenArray.reduce(add);
+    addEinnahmen = (a, b) =>  a + b;
+    sumEinnahmen = einnahmenArray.reduce(addEinnahmen);
 
-    getDifferenz(sum);
+    getDifferenz(sumEinnahmen);
 }
-function getDifferenz(sum) {
-    var ausgabenFelder = document.getElementsByClassName("ausgaben");
-    var ausgabenArray = [];
 
-    for (var i = 0; i < ausgabenFelder.length; i++) {
+function getDifferenz(sumEinnahmen) {
+    let ausgabenFelder = document.getElementsByClassName("ausgaben");
+    let ausgabenArray = [];
+
+    for (let i = 0; i < ausgabenFelder.length; i++) {
         ausgabenArray.push(parseInt(ausgabenFelder[i].value));
     }
-    add2 = (a, b) =>  a + b;
-    let sum2 = ausgabenArray.reduce(add2);
+
+    addAusgaben = (a, b) =>  a + b;
+    sumAusgaben = ausgabenArray.reduce(addAusgaben);
    
-    let ergebnis = sum - sum2;
+    ergebnis = sumEinnahmen - sumAusgaben;
 
     displayErgebnis(ergebnis);
 }
 
 function displayErgebnis(ergebnis) {
+let isNegativ = ergebnis < 0;
 
-    ergebnis < 0 ? ergebnis.style.color = "red" : ergebnis.style.color = "black";
-    document.getElementById("chart-budget").innerHTML = ergebnis;
+    if (isNegativ) {
+        ergebnisContainer.style.color = "red";
+        ergebnisContainer.style.borderColor = "red";
+        ergebnisContainer.style.backgroundColor = "#FCEAFF";
+    } else {
+        ergebnisContainer.style.color = "#FCEAFF";
+        ergebnisContainer.style.borderColor = "#FCEAFF";
+        ergebnisContainer.style.backgroundColor = "rgb(0,90,255)"
+    }
+
+    ergebnisContainer.innerHTML = 
+    `<p>${isNegativ 
+        ? "Differenz: " + ergebnis + "€ - Du hast leider nicht genügend Geld." 
+        : "Differenz: " + ergebnis + "€" }
+    </p>`;
+
+    printSeite.style.display = "block";
 }
