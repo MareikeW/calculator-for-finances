@@ -232,16 +232,27 @@ select {
 }
 
 .result {
+  display: none;
   border: 2px solid;
   border-radius: 20px;
   margin: 0 auto;
-  width: 50%;
-  padding: 1em 0;
+  padding: 1em;
   background-color: #FCEAFF;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
-  letter-spacing: 5px;
-  font-weight: bold;
+}
+
+.result-label-style {
+  margin-bottom: .5em;
+}
+
+.result-label-style:last-child {
+  margin-bottom: 0;
+}
+
+.result-number-style {
+  text-align: right;
+  float: right;
 }
 
 /* Diagramm */

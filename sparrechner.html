@@ -39,21 +39,17 @@
         <option value="jährlich">jährlich</option>
       </select>
 
-      <label for="zinssatz">Zinssatz:</label>
+      <label for="zinssatz">Zinssatz (% p.a.):</label>
       <input type="number" id="zinssatz">
 
-      <label for="ansparzeit">Ansparzeit:</label>
+      <label for="ansparzeit">Ansparzeit (Jahre):</label>
       <input type="number" id="ansparzeit">
 
-      <input type="button" id="submit-button" onClick="fillChartSparrechner(this.form)" value="Berechnen" class="calc-button" />
+      <button id="sparrechner-button" class="calc-button">Berechnen</button>
     </form>
 
     <div id="endkapital" class="result">Ergebnis</div>
 
-  </div>
-  <!-- Div für Linien- und Balkendiagramm -->
-  <div class="chart-container">
-    <canvas id="chart-sparrechner"></canvas>
   </div>
 
   <footer>&copy; 2020 Mareike Wendler</footer>

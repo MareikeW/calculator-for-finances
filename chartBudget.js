@@ -1,7 +1,5 @@
 
 const button = document.getElementById("budget-button");
-const einkommen = document.getElementById("einkommen");
-const sonstEinnahmen = document.getElementById("sonstige-einnahmen");
 const ergebnisContainer =  document.getElementById("chart-budget");
 const printSeite = document.getElementById("printSeite");
 let sumEinnahmen = 0;

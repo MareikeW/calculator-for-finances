@@ -6,6 +6,7 @@ function calc() {
   const start = parseInt(document.getElementById('anfangskapital').value);
   const zins = parseInt(document.getElementById('zinssatz').value);
   const zeit = parseInt(document.getElementById('laufzeit').value);
+  const endkapital = document.getElementById('endkapital');
 
   let ergebnis = start;
   let arrWerte = [start];
@@ -17,7 +18,12 @@ function calc() {
     arrJahre.push(i);
   }
 
-  document.getElementById('endkapital').innerHTML = ergebnis.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })
+  endkapital.innerHTML = 
+  `
+    <p class="result-label-style">Zinsen gesamt: <span class="result-number-style">${(ergebnis - start).toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })}</span></p>
+    <p class="result-label-style">Endkapital inkl. Zinsen: <span class="result-number-style">${ergebnis.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' })}</span></p>
+  `;
+  endkapital.style.display = "block";
 
   var chartData = {
     datasets: [{
