@@ -2,7 +2,8 @@
 const button = document.getElementById("submit-zins-button");
 
 button.addEventListener("click", calc);
-function calc() {
+function calc(event) {
+  event.preventDefault();
   const start = parseInt(document.getElementById('anfangskapital').value);
   const zins = parseInt(document.getElementById('zinssatz').value);
   const zeit = parseInt(document.getElementById('laufzeit').value);
