@@ -275,12 +275,8 @@ select {
 /* Budget */
 #budget-container {
   padding: 0;
-}
-
-@media (min-width: 800px) {
-  #budget-container {
-    max-width: 600px;
-  }
+  width: 80%;
+  margin: 0 auto;
 }
 
 #amount-left-banner {
@@ -332,10 +328,76 @@ fieldset {
   border-radius: 10px;
   color: #FCEAFF;
   margin-bottom: 2em;
+  margin-top: 1rem;
 }
 
 #printSeite {
   display: none;
 }
 
+@media print {
+  /* Verstecke alle Elemente aus Budgettabelle */
+  body * {
+    visibility: hidden;
+  }
 
+  #budget-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .col-left {
+    flex: 40%;
+    margin-right: 10px;
+  }
+  
+  .col-right {
+    flex: 40%;
+  }
+
+  #einnahmen-container {
+    margin-bottom: 1rem;
+  }
+
+  .budget-button {
+    padding-top: 4rem;
+    padding-bottom: 3.9rem;
+  }
+
+  /* Zeig print-container */
+  .print-container, 
+  .print-container * {
+    visibility: visible;
+  }
+
+  .print-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+@media (min-width: 950px) {
+  #budget-container {
+    display: flex;
+    width: 100%;
+  }
+
+  .col-left {
+    flex: 40%;
+    margin-right: 10px;
+  }
+  
+  .col-right {
+    flex: 40%;
+  }
+
+  #einnahmen-container {
+    margin-bottom: 1rem;
+  }
+
+  .budget-button {
+    padding-top: 4rem;
+    padding-bottom: 3.9rem;
+  }
+}

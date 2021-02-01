@@ -21,19 +21,18 @@
     </ul>
     </nav>
   </header>
-
+  <div class="print-container">
   <h1 class="page-title">Budgetplaner</h1>
 
-  <div>
-        <h3 id="amount-left-banner">Hi</h3>
-  </div>
-
-  <div class="rechner-container" id="budget-container">
-    <!-- Form zum Werte eintragen -->
+  <div id="budget-container">
+        <div class="col-left">
+    <!-- Form zum Werte eintragen class="rechner-container" -->
     <form id="budget-form" autocomplete="off">
+           
     <div class="row col-title">
         <h3>Einnahmen</h3>
     </div>
+    <div id="einnahmen-container">
     <div class="row">
             <label for="einkommen">Einkommen (Netto):</label>
             <input type="number" id="einkommen" value="0" class="einnahmen"> €
@@ -42,6 +41,7 @@
             <label for="sonstige-einnahmen">Sonstige Einnahmen:</label>
             <input type="number" id="sonstige-einnahmen" value="0" class="einnahmen"> €
     </div>
+        </div>
     <div class="row col-title">
         <h3>Ausgaben</h3>
     </div>
@@ -68,7 +68,7 @@
     </div>
     
 </fieldset>
-    
+
     <fieldset>
     <div class="row section-title">
         <h4>Transport</h4>
@@ -98,6 +98,7 @@
             <input type="number" id="sonstige-transportkosten" value="0" class="ausgaben"> €
     </div>
 </fieldset>
+
 <fieldset>
     <div class="row section-title">
         <h4>Sonstige Schulden und Kreditzahlungen</h4>
@@ -115,6 +116,9 @@
             <input type="number" id="sonstige-schulden" value="0" class="ausgaben"> €
     </div>
 </fieldset>
+        
+</div>
+<div class="col-right">    
 <fieldset>
     <div class="row section-title">
         <h4>Lebenshaltungskosten</h4>
@@ -188,14 +192,16 @@
     </div>
 </fieldset>
 
-    <div class="row form-button">
+    <div class="row form-button budget-button">
             <button id="budget-button" class="calc-button">Fertig</button>
-    </div>    
+    </div>   
+</div>
     </form>
+
   </div>
 
         <p id="chart-budget">Differenz: ...</p>
-
+</div>
         <button id="printSeite" onclick="window.print()" class="calc-button">Drucken</button>
 
   <footer>&copy; 2020 Mareike Wendler</footer>
