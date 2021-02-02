@@ -68,6 +68,13 @@ function calc(event) {
     title: {
       display: true,
       text: 'Mein Kapitalzuwachs'
+    },
+    tooltips: {
+      callbacks: {
+        label: function(tooltipItem) {
+          return tooltipItem.yLabel.toLocaleString('de-DE', { style: 'currency', currency: 'EUR' });
+        }
+      } 
     }
   }
 
