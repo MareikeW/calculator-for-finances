@@ -18,7 +18,7 @@ function calcSparrechner(event) {
 
   jahresendkapital += anfangskapital;
   if (sparintervall.value === "monatlich") {
-        for (let i = 0; i < ansparzeit; i++) {
+        for (let i = 1; i <= ansparzeit; i++) {
           jahresendkapital += (jahresendkapital * zinssatz) / 100; // Jahresendkapital + Zinsen 
           jahresendkapital += sparrate * (monate + 6.5 * (zinssatz / 100));
           arrWerte.push(jahresendkapital.toFixed(2));
