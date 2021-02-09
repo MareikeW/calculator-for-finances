@@ -9,7 +9,7 @@ body {
   width: 90%;
   margin: 0 auto;
   background-color: rgb(0,90,255);
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 a {
@@ -221,6 +221,7 @@ select {
   border-color: #005AFF;
   color: #005AFF;
   outline: none;
+  cursor: pointer;
 }
 
 .rechner-container {
