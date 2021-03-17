@@ -34,7 +34,7 @@ function calc(event) {
     }]
   }
 
-  //addData();
+  // fügt Werte in den Datensatz ein
   for (var i = 0; i < arrJahre.length; i++) {
     chartData.datasets[0].data.push(
       {

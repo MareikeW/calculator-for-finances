@@ -252,8 +252,17 @@ select {
 }
 
 .result-number-style {
-  text-align: right;
-  float: right;
+  text-align: center;
+  display: block;
+  margin-top: 1em;
+}
+
+@media (min-width: 500px) {
+  .result-number-style {
+    float: right;
+    text-align: right;
+    margin-top: 0;
+  }
 }
 
 /* Diagramm */
@@ -264,6 +273,12 @@ select {
   border-radius: 10px;
   visibility: hidden;
 }
+
+@media (max-width: 550px) {
+  .chart-container {
+    display: none;
+  }
+} 
 
 @media (min-width: 900px) {
   .chart-container {
@@ -276,7 +291,7 @@ select {
 /* Budget */
 #budget-container {
   padding: 0;
-  width: 80%;
+  min-width: 80%;
   margin: 0 auto;
 }
 
@@ -297,12 +312,12 @@ fieldset {
 
 .row label {
   display: inline-block;
-  width: 200px;
+  width: 180px;
   text-transform: capitalize;
 }
 .row input[type=number] {
-  width: 40%;
-  margin-right: 10px;
+  width: 90%;
+  margin-top: 10px;
 }
 
 .col-title {
@@ -315,6 +330,7 @@ fieldset {
   background-color: rgb(97, 175, 248);
   padding: 1em;
   margin-top: 0;
+  text-align: center;
 }
 
 .form-button {
@@ -378,7 +394,14 @@ fieldset {
   }
 }
 
-@media (min-width: 950px) {
+@media (min-width: 600px) {
+  .row input[type=number] {
+    width: 200px;
+    margin-left: 6em;
+  }
+}
+
+@media (min-width: 900px) {
   #budget-container {
     display: flex;
     width: 100%;
@@ -400,5 +423,17 @@ fieldset {
   .budget-button {
     padding-top: 4rem;
     padding-bottom: 3.9rem;
+  }
+
+  .row input[type=number] {
+    width: 90%;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1080px) {
+  .row input[type=number] {
+    width: 200px;
+    margin-left: 4em;
   }
 }

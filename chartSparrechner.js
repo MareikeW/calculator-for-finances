@@ -26,7 +26,7 @@ function calcSparrechner(event) {
           console.log("Werte: " + arrWerte[i]);
           console.log("Jahre: " + arrJahre[i]);
         }   
-        einzahlungenSumme = anfangskapital + ((sparrate * 12) * ansparzeit);
+        einzahlungenSumme = anfangskapital + ((sparrate * monate) * ansparzeit);
   } else if (sparintervall.value === "jährlich") {
         for (let i = 1; i <= ansparzeit; i++) {
           jahresendkapital = (((jahresendkapital + sparrate) * zinssatz) / 100) + sparrate + jahresendkapital;
